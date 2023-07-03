@@ -20,6 +20,51 @@ const NoteState = (props) =>{
           "tags": "General",
           "date": "2023-06-29T05:45:50.043Z",
           "__v": 0
+        },
+        {
+          "_id": "649d1a8e66dcb41cec1b128c",
+          "user": "649bc5ce70ddb8a80095202b",
+          "title": "My Title",
+          "description": "Please wake up early",
+          "tags": "General",
+          "date": "2023-06-29T05:45:50.043Z",
+          "__v": 0
+        },
+        {
+          "_id": "649d1a8e66dcb41cec1b128c",
+          "user": "649bc5ce70ddb8a80095202b",
+          "title": "My Title",
+          "description": "Please wake up early",
+          "tags": "General",
+          "date": "2023-06-29T05:45:50.043Z",
+          "__v": 0
+        },
+        {
+          "_id": "649d1a8e66dcb41cec1b128c",
+          "user": "649bc5ce70ddb8a80095202b",
+          "title": "My Title",
+          "description": "Please wake up early",
+          "tags": "General",
+          "date": "2023-06-29T05:45:50.043Z",
+          "__v": 0
+        },
+        {
+          "_id": "649d1a8e66dcb41cec1b128c",
+          "user": "649bc5ce70ddb8a80095202b",
+          "title": "My Title",
+          "description": "Please wake up early",
+          "tags": "General",
+          "date": "2023-06-29T05:45:50.043Z",
+          "__v": 0
+        },
+        {
+          "_id": "649d1a8e66dcb41cec1b128c",
+          "user": "649bc5ce70ddb8a80095202b",
+          "title": "My Title",
+          "description": "Please wake up early",
+          "tags": "General",
+          "date": "2023-06-29T05:45:50.043Z",
+          "__v": 0
         }
       ]
 
