@@ -1,8 +1,8 @@
 import React ,{useContext, useState} from 'react'
-import noteContext from '../context/notes/NoteContext';
+import NoteContext from '../context/notes/NoteContext';
 
 const AddNote = () => {
-    const context = useContext(noteContext);
+    const context = useContext(NoteContext);
     const {addNote} = context;
 
     const[note, setNote] = useState({title:"", description:"", tag:"default"})
@@ -25,6 +25,10 @@ const AddNote = () => {
           <div className="mb-3">
             <label htmlFor="description" className="form-label">Description</label>
             <input onChange={onChange} type="text" id="description" name='description' className="form-control"/>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="tag" className="form-label">Tag</label>
+            <input onChange={onChange} type="text" id="tag" name='tag' className="form-control"/>
           </div>
          <button type="submit" className="btn btn-primary" onClick={handleClick}>Add Note</button>
         </form>
