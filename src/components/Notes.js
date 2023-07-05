@@ -44,11 +44,11 @@ const onChange = (e)=>{
                 <form>
                       <div className="mb-3">
                         <label htmlFor="title" className="form-label" value={note.etitle}>Title</label>
-                        <input onChange={onChange} type="text" className="form-control" id="etitle" name='etitle' aria-describedby="emailHelp"/>
+                        <input onChange={onChange} type="text" className="form-control" id="etitle" name='etitle' aria-describedby="emailHelp" minLength={5} required/>
                       </div>
                       <div className="mb-3">
                         <label htmlFor="description" className="form-label" value={note.edescription}>Description</label>
-                        <input onChange={onChange} type="text" id="edescription" name='edescription' className="form-control"/>
+                        <input onChange={onChange} type="text" id="edescription" name='edescription' className="form-control" minLength={5} required/>
                       </div>
                       <div className="mb-3">
                         <label htmlFor="tag" className="form-label" value={note.etag}>Tag</label>
@@ -58,14 +58,17 @@ const onChange = (e)=>{
               </div>
               <div className="modal-footer">
                 <button ref={refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button onClick={handleClick} type="button" className="btn btn-primary">Update Note</button>
+                <button disabled={note.etitle.length<5 || note.edescription.length<5} onClick={handleClick} type="button" className="btn btn-primary">Update Note</button>
               </div>
             </div>
           </div>
         </div>
     <div className="row my-3">
       <h2>Your Notes</h2>
-        {notes.map((note)=>{
+        <div className="container">
+        {notes.length ===0 && "No notes to display"}
+        </div>
+        {notes.map((note) => {
           return <Noteitem key={note._id} updateNote={updateNote} note={note}/>
         })} 
       </div>
