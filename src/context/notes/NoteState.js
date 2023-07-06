@@ -3,9 +3,8 @@ import NoteContext from "./NoteContext";
 
 const NoteState = (props) =>{
   const host = "http://localhost:5000"
-    const notesInitial = {}
-
-      const[notes, setNotes] = useState(notesInitial)
+    const notesInitial = []
+    const[notes, setNotes] = useState(notesInitial)
 
       // Get all Notes
       const getNotes = async() =>{
@@ -18,7 +17,6 @@ const NoteState = (props) =>{
           }
         });
         const json = await response.json()
-        console.log(json)
         setNotes(json)
       }
 
@@ -47,10 +45,9 @@ const NoteState = (props) =>{
           },
         });
         const json = response.json();
-        console.log(json)
 
         console.log("Deleting a note " + id)
-        const newNotes = notes.filter((note)=>{return note._id!==id})
+        const newNotes = notes.filter((note)=>{return note._id !== id})
         setNotes(newNotes)
       }
       // Edit a Note
@@ -65,7 +62,6 @@ const NoteState = (props) =>{
           body: JSON.stringify({title, description ,tag}),
         });
         const json = await response.json();
-        console.log(json)
         
         let newNotes = JSON.parse(JSON.stringify(notes))
         // Login to edit in client
