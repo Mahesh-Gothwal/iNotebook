@@ -20,10 +20,11 @@ const Login = (props) => {
           if(json.success){
             // Save the auth token & Redirect
             localStorage.setItem('token', json.authtoken);
-            history.push("/");
+            history("/");
+            props.showAlert("Logged in Successfully", "success")
           }
           else{
-            alert("Invalid");
+            props.showAlert("Invalid Credientials", "danger")
           }
     }
     
@@ -40,7 +41,7 @@ const onChange = (e)=>{
             </div>
             <div className="mb-3">
                 <label htmlFor="password" className="form-label">Password</label>
-                <input onChange={onChange} type="password" className="form-control" id="password" name='password' value={credentials.password}/>
+                <input onChange={onChange} type="password" className="form-control" id="password" name='password' value={credentials.password}/> 
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
         </form>
